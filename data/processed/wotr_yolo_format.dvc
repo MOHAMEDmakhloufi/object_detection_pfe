@@ -1,0 +1,6 @@
+outs:
+- md5: 1472c657132183fe7587b98410a159c5.dir
+  size: 4460581095
+  nfiles: 27856
+  hash: md5
+  path: wotr_yolo_format

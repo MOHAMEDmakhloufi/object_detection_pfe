@@ -1,0 +1,43 @@
+
+dataset:
+  name: wotr
+  classes:
+    - fire_hydrant
+    - blind_road
+    - car
+    - sign
+    - pole
+    - green_light
+    - reflective_cone
+    - ashcan
+    - tree
+    - bus
+    - red_light
+    - warning_column
+    - motorcycle
+    - crosswalk
+    - dog
+    - tricycle
+    - person
+    - bicycle
+    - roadblock
+    - truck
+  raw_data_path: /kaggle/input/wotr-dataset/WOTR # This will be replaced by DVC pull path
+  processed_data_path: ./data/processed/wotr_yolo_format
+
+training:
+  epochs: 200
+  imgsz: 640
+  batch_size: 16
+  model_name: yolov7-wotr
+  weights_path: yolov7.pt # Path to initial weights, can be yolov7.pt or a custom path
+
+deployment:
+  tflite_output_dir: ./models/tflite
+  onnx_output_dir: ./models/onnx
+
+mlflow:
+  tracking_uri: http://localhost:5000 # Or your remote MLflow server URI
+  experiment_name: YOLOv7_Object_Detection
+
+
