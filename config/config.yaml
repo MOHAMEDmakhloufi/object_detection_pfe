@@ -22,22 +22,25 @@ dataset:
     - bicycle
     - roadblock
     - truck
-  raw_data_path: /kaggle/input/wotr-dataset/WOTR # This will be replaced by DVC pull path
-  processed_data_path: ./data/processed/wotr_yolo_format
+  raw_data_path: data/raw/WOTR
+  processed_data_path: data/processed/wotr_yolo_format
+  wotr_config_path : config/wotr_config.yaml
 
 training:
-  epochs: 200
+  epochs: 1
   imgsz: 640
   batch_size: 16
-  model_name: yolov7-wotr
-  weights_path: yolov7.pt # Path to initial weights, can be yolov7.pt or a custom path
+  device: mps
+  training_output_dir: outputs
+  model_name: yolov11-wotr
+  weights_path: models/yolov11/yolo11m.pt
 
 deployment:
   tflite_output_dir: ./models/tflite
   onnx_output_dir: ./models/onnx
 
 mlflow:
-  tracking_uri: http://localhost:5000 # Or your remote MLflow server URI
-  experiment_name: YOLOv7_Object_Detection
+  tracking_uri: http://localhost:5000
+  experiment_name: YOLOv11_Object_Detection
 
 

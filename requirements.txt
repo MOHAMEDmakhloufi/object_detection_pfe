@@ -1,0 +1,7 @@
+
+ultralytics
+PyYAML
+mlflow
+dvc[gdrive]
+dvc-gdrive
+
