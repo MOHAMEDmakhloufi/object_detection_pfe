@@ -3,6 +3,7 @@ import os
 import xml.etree.ElementTree as ET
 from shutil import copy2
 
+
 def voc_to_yolo_wotr(dataset_root, output_root, classes_names):
     sets = ['train', 'val', 'test']
 

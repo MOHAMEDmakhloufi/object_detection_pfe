@@ -22,6 +22,10 @@ dataset:
     - bicycle
     - roadblock
     - truck
+  file_id: 11Idy50HhzedOXxpxYuoecfqMNHGcxVfj
+  output_file: wotr_dataset.zip
+  extract_dir: data/raw
+  extract_folder: WOTR
   raw_data_path: data/raw/WOTR
   processed_data_path: data/processed/wotr_yolo_format
   wotr_config_path : config/wotr_config.yaml
