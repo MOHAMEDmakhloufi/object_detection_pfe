@@ -1,6 +1,7 @@
 data/processed/wotr_yolo_format
 data/raw
-
+models
+outputs
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
