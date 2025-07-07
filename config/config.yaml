@@ -30,21 +30,24 @@ dataset:
   processed_data_path: data/processed/wotr_yolo_format
   wotr_config_path : config/wotr_config.yaml
 
+output_dir_path : outputs
+
 training:
   epochs: 1
   imgsz: 640
-  batch_size: 16
+  batch_size: -1
   device: mps
   training_output_dir: outputs
   model_name: yolov11-wotr
-  weights_path: models/yolov11/yolo11m.pt
+  weights_path: models/yolov11/yolo11n.pt
 
 deployment:
-  tflite_output_dir: ./models/tflite
-  onnx_output_dir: ./models/onnx
+  models_dir: models/
+  tflite_output_dir: models/tflite
+  onnx_output_dir: models/onnx
 
 mlflow:
-  tracking_uri: http://localhost:5000
+  tracking_uri: file:///Users/macbook/PycharmProjects/object_detection_pfe/mlruns
   experiment_name: YOLOv11_Object_Detection
 
 
